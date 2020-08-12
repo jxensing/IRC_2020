@@ -24,5 +24,5 @@ st.remove_response(output="VEL", water_level=60, pre_filt=pre_filt, zero_mean=Tr
 
 #save corrected data
 for tr in st:
-    tr.write('Corrected/'+tr.stats.station+'.'+tr.stats.network+'.'+tr.stats.location+'.'+tr.stats.channel+".MSEED",format="MSEED")
+    tr.write(tr.stats.station+'.'+tr.stats.network+'.'+tr.stats.location+'.'+tr.stats.channel+".IRC.MSEED",format="MSEED")
 st.plot()
